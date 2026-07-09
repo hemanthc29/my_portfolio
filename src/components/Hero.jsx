@@ -120,7 +120,7 @@ export default function Hero() {
  
             <a
               href={resumeUrl}
-              download="Resume_SE_Chennuru_Venkata_Hemanth_Kumar.docx"
+              download="Resume_SE_Chennuru_Venkata_Hemanth_Kumar.pdf"
               className="px-6 py-3.5 rounded-xl bg-bg-card border border-purple-500/20 hover:border-purple-500/50 hover:bg-bg-card-hover text-purple-600 dark:text-purple-300 hover:text-purple-500 dark:hover:text-purple-200 font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer theme-transition"
             >
               <FiDownload />

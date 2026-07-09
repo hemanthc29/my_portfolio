@@ -5,7 +5,7 @@ export default function LoadingScreen({ onComplete }) {
   const [textIndex, setTextIndex] = useState(0);
   const loadingTexts = [
     "Initializing portfolio environment...",
-    "Loading career details from Resume_SE.docx...",
+    "Loading career details from Resume_SE.pdf...",
     "importing { React, TailwindCSS, FramerMotion }...",
     "const engineer = new SDE('Chennuru Venkata Hemanth Kumar');",
     "engineer.solveDSA(6380+); // Diamond III Consistency",

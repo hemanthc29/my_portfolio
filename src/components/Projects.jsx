@@ -6,12 +6,26 @@ import jeePrepImg from "../assets/project_jee_prep.png";
 import timetableImg from "../assets/project_timetable.png";
 import riderSafetyImg from "../assets/project_rider_safety.png";
 import eventMgmtImg from "../assets/project_event_mgmt.png";
+import djangoBackendImg from "../assets/project_django_backend.png";
+import carWebsiteImg from "../assets/project_car_website.png";
+import collegePortalImg from "../assets/project_college_portal.png";
+import weatherDashboardImg from "../assets/project_weather_dashboard.png";
+import musicPlayerImg from "../assets/project_music_player.png";
+import ottStreamingImg from "../assets/project_ott_streaming.png";
+import hotelBookingImg from "../assets/project_hotel_booking.png";
 
 const projectImages = {
   "jee-prep": jeePrepImg,
   "timetable-gen": timetableImg,
   "rider-safety": riderSafetyImg,
   "event-resource": eventMgmtImg,
+  "django-projects": djangoBackendImg,
+  "car-website": carWebsiteImg,
+  "hotel-booking": hotelBookingImg,
+  "college-website": collegePortalImg,
+  "weather-dashboard": weatherDashboardImg,
+  "music-player": musicPlayerImg,
+  "ott-platform": ottStreamingImg,
 };
 
 const slideVariants = {
@@ -96,7 +110,7 @@ export default function Projects() {
     setCurrentIndex((prev) => (prev === filteredProjects.length - 1 ? 0 : prev + 1));
   };
 
-  const project = filteredProjects[currentIndex];
+  const project = filteredProjects[currentIndex] || filteredProjects[0];
   const projectImg = project ? projectImages[project.id] : null;
 
   return (
@@ -205,11 +219,15 @@ export default function Projects() {
                   <div className="relative w-full md:w-5/12 min-h-[220px] md:min-h-auto p-6 md:p-8 flex flex-col justify-between overflow-hidden shrink-0">
                     {/* Background Image with Overlay */}
                     <div className="absolute inset-0 z-0">
-                      <img 
-                        src={projectImg} 
-                        alt={project.name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
+                      {projectImg ? (
+                        <img 
+                          src={projectImg} 
+                          alt={project.name}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div className={`w-full h-full bg-gradient-to-br ${project.themeGradient} opacity-90`} />
+                      )}
                       {/* Gradient overlay for blending and text contrast */}
                       <div className={`absolute inset-0 bg-gradient-to-r ${project.themeGradient} opacity-75 mix-blend-multiply`} />
                       <div className="absolute inset-0 bg-gradient-to-t from-bg-darker via-transparent to-transparent opacity-60 md:hidden" />
@@ -283,7 +301,7 @@ export default function Projects() {
                       {/* Project Action Buttons */}
                       <div className="flex items-center gap-3">
                         <a 
-                          href="https://github.com/hemanthc29"
+                          href={project.codeUrl || "https://github.com/hemanthc29"}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-border-glass hover:border-purple-500/50 bg-bg-darker text-text-secondary hover:text-text-primary text-xs font-semibold transition-all duration-300 theme-transition"
@@ -293,7 +311,7 @@ export default function Projects() {
                         </a>
 
                         <a 
-                          href="https://github.com/hemanthc29"
+                          href={project.liveUrl || "https://github.com/hemanthc29"}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-purple-600/10 border border-purple-500/20 hover:bg-purple-600 text-purple-600 dark:text-purple-300 hover:text-white text-xs font-semibold transition-all duration-300 theme-transition"

@@ -38,12 +38,12 @@ export default function Resume() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a
-                href="/Resume_SE.docx"
-                download="Resume_SE_Chennuru_Venkata_Hemanth_Kumar.docx"
+                href="/Resume_SE.pdf"
+                download="Resume_SE_Chennuru_Venkata_Hemanth_Kumar.pdf"
                 className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-medium hover:opacity-95 shadow-lg shadow-purple-600/20 transition-all cursor-pointer"
               >
                 <FiDownload />
-                <span>Download DOCX</span>
+                <span>Download PDF</span>
               </a>
 
               <button
@@ -242,12 +242,12 @@ export default function Resume() {
                   Close Preview
                 </button>
                 <a
-                  href="/Resume_SE.docx"
-                  download="Resume_SE_Chennuru_Venkata_Hemanth_Kumar.docx"
+                  href="/Resume_SE.pdf"
+                  download="Resume_SE_Chennuru_Venkata_Hemanth_Kumar.pdf"
                   className="px-4 py-2 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-95 text-xs text-white font-semibold flex items-center gap-1.5 cursor-pointer shadow-md shadow-purple-600/10"
                 >
                   <FiDownload />
-                  <span>Download Document</span>
+                  <span>Download PDF</span>
                 </a>
               </div>
             </motion.div>

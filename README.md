@@ -26,7 +26,7 @@ It is designed to impress recruiters, hiring managers, and technical interviewer
 5. **Polished Timelines**: Smooth scrolling vertical lines for Work Experience and academic credentials.
 6. **Detailed Contact System**: Active inputs, clients validation, and simulated mail success notifications.
 7. **SEO Optimization**: Configured Title tags, Meta keywords, descriptions, and Open Graph tags directly in `index.html`.
-8. **Document Download System**: Direct links supporting downloading the official `Resume_SE.docx` document from the website.
+8. **Document Download System**: Direct links supporting downloading the official `Resume_SE.pdf` document from the website.
 
 ---
 
@@ -35,7 +35,7 @@ It is designed to impress recruiters, hiring managers, and technical interviewer
 ```
 Profile-Anti/
 ├── public/
-│   └── Resume_SE.docx        # Accessible resume download source
+│   └── Resume_SE.pdf        # Accessible resume download source
 ├── src/
 │   ├── assets/
 │   │   └── profile.jpg       # Profile picture copied from raw source
