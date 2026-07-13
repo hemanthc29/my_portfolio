@@ -40,12 +40,9 @@ export default function App() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
 
-  // Read theme from local storage or fallback to system preferences
+  // Read theme from local storage, defaulting strictly to dark mode
   const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) return savedTheme;
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return systemPrefersDark ? "dark" : "light";
+    return localStorage.getItem("theme") || "dark";
   });
 
   // Toggle theme handler
